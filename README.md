@@ -1,6 +1,11 @@
 # Constructions-Are-So-Difficult
 
-## Experimental Setup
+This repository contains the code for [Constructions Are So Difficult That Even Large Language Models Get Them Right for the Wrong Reasons](https://arxiv.org/abs/2403.17760).
+
+## 📝 Abstract
+In this paper, we make a contribution that can be understood from two perspectives: from an NLP perspective, we introduce a small challenge dataset for NLI with large lexical overlap, which minimises the possibility of models discerning entailment solely based on token distinctions, and show that GPT-4 and Llama 2 fail it with strong bias. We then create further challenging sub-tasks in an effort to explain this failure. From a Computational Linguistics perspective, we identify a group of constructions with three classes of adjectives which cannot be distinguished by surface features. This enables us to probe for LLM's understanding of these constructions in various ways, and we find that they fail in a variety of ways to distinguish between them, suggesting that they don't adequately represent their meaning or capture the lexical properties of phrasal heads.
+
+## 🧪 Experimental Setup
 ### prompting
 
 We only accept output with exact one label "Entailment" or "Contraction" as a valid answer, and keep regenerating until it returns a valid one.
@@ -26,3 +31,17 @@ the last-layer embeddings of sentences
 
 b) Llama 2
 the last-layer embeddings of sentences and of the adjectives, which license the so that construction.
+
+## 📕 Citation
+If you make use of the code in this repository, please cite the following papers:
+```
+@misc{zhou2024constructions,
+      title={Constructions Are So Difficult That Even Large Language Models Get Them Right for the Wrong Reasons}, 
+      author={Shijia Zhou and Leonie Weissweiler and Taiqi He and Hinrich Schütze and David R. Mortensen and Lori Levin},
+      year={2024},
+      eprint={2403.17760},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
